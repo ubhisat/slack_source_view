@@ -1,0 +1,33 @@
+{% include 'base.html' %}
+
+<div class="container-full">
+
+
+    <div class="jumbotron text-center">
+        <h1>Slack Source View</h1>
+
+        <p>Enter the url of the page whose source you wish to see</p>
+
+        <small>(http:// will be added if not provided)</small>
+
+        <form method="post" id="index_form" role="form" class="form-horizontal">{% csrf_token %}
+            <input type="text" id="txt_url" class="form-control" name="url" placeholder="">
+            <hr>
+            <div class="error"><h4>{{ error }}</h4></div>
+            <button type="submit" class="btn btn-large btn-success">Show me the Source</button>
+        </form>
+    </div>
+
+</div> <!-- /container full -->
+
+<script type="text/javascript">
+    $('#index_form').submit(function () {
+        var url = $('#txt_url').val();
+        if (url == "") {
+            alert('please enter valid url');
+            return false;
+        }
+        return true;
+    });
+
+</script>

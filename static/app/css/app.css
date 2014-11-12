@@ -1,0 +1,16 @@
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+.source_content {
+    height: 800px;
+    min-height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.tag {
+    cursor: pointer;
+}
+.error {
+    color : red;
+}

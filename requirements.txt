@@ -1,0 +1,3 @@
+django-twitter-bootstrap
+django-bootstrap3==4.7.0
+requests
